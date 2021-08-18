@@ -5,7 +5,7 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className={styles.main}>
       <div className={styles.main_title}>
-        <h1 className={styles.text}>Privacy Policy</h1>
+        <h1 className={styles.text}>プライバシーポリシー</h1>
         <span>個人情報保護方針</span>
       </div>
 
