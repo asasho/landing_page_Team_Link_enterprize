@@ -1,0 +1,65 @@
+.main {
+  max-width: 1000px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+}
+
+.main_title {
+  font-family: jaf-bernina-sans, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+}
+
+.detail ul {
+  padding-left: 0;
+  margin-bottom: 100px;
+}
+
+.detail ul li {
+  margin-bottom: 70px;
+}
+
+p {
+  font-family: 游ゴシック体, YuGothic, 游ゴシック Medium, Yu Gothic Medium,
+    游ゴシック, Yu Gothic, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+}
+
+.title {
+  text-align: left;
+  font-family: 游ゴシック体, YuGothic, 游ゴシック Medium, Yu Gothic Medium,
+    游ゴシック, Yu Gothic, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+}
+
+.text {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.title span {
+  font-size: 0.87vw;
+  font-family: 游ゴシック体, YuGothic, 游ゴシック, Yu Gothic,
+    Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+  line-height: 1.66667;
+  color: #949494;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.first {
+  margin-bottom: 100px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.name {
+  margin-top: 40px;
+}
+
+.address {
+  margin-top: 40px;
+}

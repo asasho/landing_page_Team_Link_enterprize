@@ -13,6 +13,7 @@ import Header from "./organisms/Header";
 import Cta from "./molecules/Cta";
 import Footer from "./organisms/Footer";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   // const { hash, pathname } = useLocation();
@@ -27,8 +28,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/about/link" component={Top} />
-        <Route exact path="/about/features" component={Feature} />
+        <Route exact path="/" component={Top} />
+        <Route exact path="/about" component={Feature} />
+        <Route exact path="/privacy" component={PrivacyPolicy} />
         <Route component={NotFound} />
       </Switch>
       <Cta />
