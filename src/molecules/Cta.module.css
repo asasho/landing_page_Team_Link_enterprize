@@ -1,0 +1,167 @@
+.cta {
+  background-color: #0095f6;
+  padding: 40px 0;
+}
+
+.cta_pc {
+  display: flex;
+  justify-content: center;
+}
+
+.cta_pcwhite,
+.cta_pcwhite span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0095f6;
+}
+
+.cta_pcwhite {
+  width: 390px;
+  height: 80px;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+}
+
+.cta_pcwhite span {
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+}
+
+.cta_pcblue {
+  margin-left: 12px;
+  text-decoration: none;
+  width: 390px;
+  height: 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta_pcblue span {
+  border: 3px solid #fff;
+  background-color: #0095f6;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+@media screen and (min-width: 769px) {
+  .cta > p {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: #f8f8f8;
+  }
+
+  .cta > p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .cta > p span {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .cta_sp {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta_blue,
+  .cta_blue span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta_blue {
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+  }
+
+  .cta_blue span {
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: #0095f6;
+    height: 100%;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px;
+    position: relative;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .cta_white,
+  .cta_white span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta_white {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+    height: 50px;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  .cta_white span {
+    font-size: 13px;
+    color: #0095f6;
+    letter-spacing: 1px;
+    background-color: #fff;
+    height: 100%;
+    font-weight: 700;
+    border-radius: 50px;
+    position: relative;
+    transition: all 0.15s ease-in-out;
+    border: 3px solid #0095f6;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,162 @@
+.header {
+  height: 96px;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  width: 600px;
+  position: relative;
+}
+
+.logo ul {
+  position: fixed;
+  top: 25px;
+  left: 200px;
+}
+
+.header_a {
+  width: 240px;
+  height: 50px;
+}
+
+.header_a img {
+  height: 100%;
+  width: auto;
+  padding: 0px;
+  margin-top: 25px;
+}
+
+.header_nav {
+  margin-left: auto;
+}
+
+.header_ul {
+  position: relative;
+  top: -4px;
+  width: 600px;
+  padding: 0;
+}
+
+.header_li {
+  margin-left: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+.header_li {
+  display: inline-block;
+}
+
+.tag,
+.tag_left {
+  display: inline-block;
+  text-decoration: none !important;
+  color: #191919;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.tag_left {
+  line-height: 14px;
+}
+
+.btn_white,
+.btn_blue {
+  display: inline-block;
+  width: 150px;
+  font-weight: 700;
+  border-radius: 25px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.btn_white {
+  background-color: white;
+  text-decoration: none !important;
+  color: #0095f6;
+  border: 2px solid #0095f6;
+  box-sizing: border-box;
+}
+
+.btn_blue {
+  background-color: #0095f6;
+  text-decoration: none !important;
+  color: white;
+}
+
+@media screen and (max-width: 886px) {
+  .header {
+    position: fixed;
+    background-color: #fff;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    padding: 0 0 0 13px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .header_a {
+    width: 80px;
+    height: 40px;
+  }
+
+  .burger_a {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .burger_a img {
+    height: 50px;
+  }
+
+  .header_a img {
+    height: 100%;
+    width: auto;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  .header_nav {
+    width: 50px;
+    display: relative;
+    overflow: hidden;
+  }
+
+  .header_ul {
+    display: flex !important;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .header_li {
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .btn_white,
+  .btn_blue {
+    width: 240px;
+  }
+}
