@@ -14,6 +14,7 @@ import Cta from "./molecules/Cta";
 import Footer from "./organisms/Footer";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   // const { hash, pathname } = useLocation();
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/" component={Top} />
         <Route exact path="/about" component={Feature} />
         <Route exact path="/privacy" component={PrivacyPolicy} />
+        <Route exact path="/terms_of_service" component={TermsOfService} />
         <Route component={NotFound} />
       </Switch>
       <Cta />
