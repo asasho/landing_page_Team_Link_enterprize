@@ -7,123 +7,257 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 const QandA: React.FC = () => {
   return (
-    <div>
-      <div className={styles.category}></div>
+    <div className={styles.q_and_a}>
+      <div className={styles.category}>
+        <h1>よくあるお問い合わせ</h1>
+        <div className={styles.table}>
+          <Link to="category_1" smooth={true} offset={-100}>
+            <h3>1. Team Linkについて</h3>
+          </Link>
+          <Link to="category_2" smooth={true} offset={-100}>
+            <h3>2. Team Linkの登録について</h3>
+          </Link>
+          <Link to="category_3" smooth={true} offset={-100}>
+            <h3>3. Team Linkの使い方について</h3>
+          </Link>
+          <Link to="category_4" smooth={true} offset={-100}>
+            <h3>4. サービスページ作成について</h3>
+          </Link>
+          <Link to="category_5" smooth={true} offset={-100}>
+            <h3>5. 検索機能について</h3>
+          </Link>
+          <Link to="category_6" smooth={true} offset={-100}>
+            <h3>6. メッセージ機能について</h3>
+          </Link>
+          <Link to="category_7" smooth={true} offset={-100}>
+            <h3>7. 法人アカウント管理について</h3>
+          </Link>
+          <Link to="category_8" smooth={true} offset={-100}>
+            <h3>8. 有料プランについて</h3>
+          </Link>
+        </div>
+      </div>
+
       <div className={styles.qa_container}>
-        <div className={styles.qa_wrap}>
+        <Element name="category_1" className={styles.qa_wrap}>
           <h1>1. Team Linkについて</h1>
           <Accordion allowZeroExpanded>
             {items1.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_2" className={styles.qa_wrap}>
           <h1>2. Team Linkの登録について</h1>
           <Accordion allowZeroExpanded>
             {items2.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_3" className={styles.qa_wrap}>
           <h1>3. Team Linkの使い方について</h1>
           <Accordion allowZeroExpanded>
             {items3.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_4" className={styles.qa_wrap}>
           <h1>4. サービスページ作成について</h1>
           <Accordion allowZeroExpanded>
             {items4.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_5" className={styles.qa_wrap}>
           <h1>5. 検索機能について</h1>
           <Accordion allowZeroExpanded>
             {items5.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_6" className={styles.qa_wrap}>
           <h1>6. メッセージ機能について</h1>
           <Accordion allowZeroExpanded>
             {items6.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_7" className={styles.qa_wrap}>
           <h1>7. 法人アカウントについて</h1>
           <Accordion allowZeroExpanded>
             {items7.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
 
-        <div className={styles.qa_wrap}>
+        <Element name="category_8" className={styles.qa_wrap}>
           <h1>8. 有料プランについて</h1>
           <Accordion allowZeroExpanded>
             {items8.map((i) => (
-              <AccordionItem key={i.uuid}>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{i.heading}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>{i.content}</AccordionItemPanel>
-              </AccordionItem>
+              <div className={styles.QAset}>
+                <AccordionItem key={i.uuid}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      <div className={styles.question}>
+                        <div className={styles.icon_q}>Q</div>
+                        <h3>{i.heading}</h3>
+                      </div>
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <div className={styles.answer}>
+                      <div className={styles.icon_a}>A</div>
+                      <h3>{i.content}</h3>
+                    </div>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </div>
             ))}
           </Accordion>
-        </div>
+        </Element>
       </div>
     </div>
   );
@@ -192,23 +326,52 @@ const items5 = [
     content:
       "プロフィールを充実させたり、自社のサービスサイトの掲載に力を入れたりしていただくことで検索順位が上がりやすくなります。",
   },
-  { uuid: 3, heading: "", content: "" },
 ];
 
 const items6 = [
-  { uuid: 1, heading: "", content: "" },
-  { uuid: 2, heading: "", content: "" },
-  { uuid: 3, heading: "", content: "" },
+  {
+    uuid: 1,
+    heading: "メッセージ機能とは何ですか？",
+    content:
+      "貴社が気になった企業様/経営層の方へメッセージを送信できる機能です。メッセージのやり取りを通して相手先の企業様/経営層の方と繋がることができます。",
+  },
+  {
+    uuid: 2,
+    heading: "メッセージを送信できる数に制限はありますか？",
+    content:
+      "経営層の方の場合は制限がございませんので無料で相談いただけます。一方、掲載企業の方は送信するメッセージの数によって有料プランに入っていただく必要があります。有料プランの詳細はこちら()を参照してください",
+  },
+  {
+    uuid: 3,
+    heading:
+      "メッセージを受信して返信する際もメッセージ数にカウントされますか？",
+    content: "",
+  },
+  {
+    uuid: 4,
+    heading:
+      "一度メッセージを送った相手からメッセージを送受信する頻度に制限はありますか？",
+    content:
+      "一度メッセージを送った方とのやり取りに制限はございません。有料プランの方も初回メッセージ送信以降は追加で料金が発生することはありません。",
+  },
+  {
+    uuid: 4,
+    heading: "メッセージの返信が来ません",
+    content:
+      "メッセージの返信率はメッセージ内容によって30%〜70%と大きく変わります。共創のイメージがわきやすいメッセージを送りましょう。",
+  },
 ];
 
 const items7 = [
-  { uuid: 1, heading: "", content: "" },
-  { uuid: 2, heading: "", content: "" },
-  { uuid: 3, heading: "", content: "" },
+  {
+    uuid: 1,
+    heading: "メールマガジン/お知らせの配信を停止したい。",
+    content: "アッカウント管理ページ内の「メール配信設定」より設定が可能です。",
+  },
+  { uuid: 2, heading: "担当者を変更/削除したい。", content: "" },
+  { uuid: 3, heading: "退会したい。", content: "" },
 ];
 
 const items8 = [
-  { uuid: 1, heading: "", content: "" },
-  { uuid: 2, heading: "", content: "" },
-  { uuid: 3, heading: "", content: "" },
+  { uuid: 1, heading: "有料プランの内容を教えてください", content: "" },
 ];

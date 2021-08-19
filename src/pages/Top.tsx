@@ -4,7 +4,11 @@ import MediaQuery from "react-responsive";
 
 const Top = () => {
   return (
-    <main data-pg-key="top" style={{ overflow: "hidden" }}>
+    <main
+      data-pg-key="top"
+      style={{ overflow: "hidden" }}
+      className={styles.head_main}
+    >
       <section className={`${styles.head} ${styles.typesquare_tags}`}>
         <div className={`${styles.head_inner} ${styles.typesquare_tags}`}>
           <h1 className={`${styles.head_copy} ${styles.typesquare_tags}`}>
@@ -216,11 +220,9 @@ const Top = () => {
         </div>
       </section>
       <section className={styles.point}>
-        <h2>
-          <div className={styles.point_title}>
-            <div className={styles.point_text}>Team Linkの特徴</div>
-          </div>
-        </h2>
+        <div className={styles.point_title}>
+          <div className={styles.point_text}>Team Linkの特徴</div>
+        </div>
         <div className={styles.point_sub}>
           ターゲット層にしっかり伝わり、確度の高い提案が可能
         </div>

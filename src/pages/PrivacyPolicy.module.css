@@ -22,7 +22,10 @@
   margin-bottom: 35px;
 }
 
-p {
+.first p,
+.content p,
+.name p,
+.address p {
   font-weight: 400;
   font-size: 13px;
   color: #8a8f9c;
@@ -73,7 +76,10 @@ p {
     font-size: 20px;
   }
 
-  p {
+  .first p,
+  .content p,
+  .name p,
+  .address p {
     font-size: 13px;
   }
 }

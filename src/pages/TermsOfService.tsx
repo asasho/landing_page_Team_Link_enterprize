@@ -8,7 +8,7 @@ const TermsOfService: React.FC = () => {
         <h1 className={styles.text}>Team Link利用規約</h1>
       </div>
 
-      <div>
+      <div className={styles.sub_title}>
         <h2>サイト利用規約</h2>
       </div>
 
