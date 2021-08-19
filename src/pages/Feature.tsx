@@ -43,7 +43,7 @@ const Feature = () => {
                 </div>
               </div>
               <div className={styles.item_item}>
-                <img src="https://www.team-link.jp/static/media/direct_offer.7329f67c.png" />
+                <img src="https://d11l9ihcbn52nk.cloudfront.net/IMG/direct_offer.png" />
               </div>
             </div>
             <div className={styles.item}>
@@ -65,7 +65,7 @@ const Feature = () => {
                 </div>
               </div>
               <div className={styles.item_item}>
-                <img src="https://www.team-link.jp/static/media/search_boss.67c6a285.png" />
+                <img src="https://d11l9ihcbn52nk.cloudfront.net/IMG/search_boss%20(1).png" />
               </div>
             </div>
             <div className={styles.item}>
@@ -88,7 +88,7 @@ const Feature = () => {
                 </div>
               </div>
               <div className={styles.item_item}>
-                <img src="https://www.team-link.jp/static/media/Q&A%E5%9B%9E%E7%AD%94.4544789b.png" />
+                <img src="https://d11l9ihcbn52nk.cloudfront.net/IMG/Q&A%E5%9B%9E%E7%AD%94.png" />
               </div>
             </div>
             <div className={styles.item}>
@@ -108,7 +108,7 @@ const Feature = () => {
                 </div>
               </div>
               <div className={styles.item_item}>
-                <img src="https://www.team-link.jp/static/media/publishing_searvice.023d2a6f.png" />
+                <img src="https://d11l9ihcbn52nk.cloudfront.net/IMG/publishing_searvice%20(1).png" />
               </div>
             </div>
           </section>

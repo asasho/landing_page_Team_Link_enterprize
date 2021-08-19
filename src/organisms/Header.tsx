@@ -5,6 +5,7 @@ import MediaQuery from "react-responsive";
 import { slide as Menu } from "react-burger-menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpenState, setMenuOpenState] = useState(false);
@@ -85,6 +86,11 @@ const Header = () => {
               onStateChange={(state) => stateChangeHandler(state)}
             >
               <ul className={styles.header_ul}>
+                <li className={styles.header_li}>
+                  <Link className={styles.tag} to="/about/link">
+                    Team Linkとは
+                  </Link>
+                </li>
                 <li className={styles.header_li}>
                   <a className={styles.tag} href="/about/features">
                     機能

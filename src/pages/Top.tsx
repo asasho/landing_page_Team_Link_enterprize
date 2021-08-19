@@ -125,7 +125,7 @@ const Top = () => {
                     style={{ width: "100%", paddingBottom: "67.3333%" }}
                   ></div>
                   <img
-                    src="	https://www.team-link.jp/static/media/direct_approach.5935a7cd.gif"
+                    src="https://d11l9ihcbn52nk.cloudfront.net/IMG/direct_approach.gif"
                     style={{
                       position: "absolute",
                       top: "0px",
@@ -159,7 +159,7 @@ const Top = () => {
                     style={{ width: "100%", paddingBottom: "67.3333%" }}
                   ></div>
                   <img
-                    src="https://www.team-link.jp/static/media/speedy.cc1e8bab.gif"
+                    src="https://d11l9ihcbn52nk.cloudfront.net/IMG/speedy.gif"
                     style={{
                       position: "absolute",
                       top: "0px",
@@ -189,7 +189,7 @@ const Top = () => {
                     style={{ width: "100%", paddingBottom: "67.3333%" }}
                   ></div>
                   <img
-                    src="https://www.team-link.jp/static/media/cheap.6a4b3dfb.gif"
+                    src="https://d11l9ihcbn52nk.cloudfront.net/IMG/cheap.gif"
                     style={{
                       position: "absolute",
                       top: "0px",
