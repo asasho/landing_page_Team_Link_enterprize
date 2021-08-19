@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
 import { slide as Menu } from "react-burger-menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpenState, setMenuOpenState] = useState(false);
@@ -20,27 +20,33 @@ const Header = () => {
     document.body.removeAttribute("style");
   }
 
+  const pathName = useLocation().pathname;
+
+  useEffect(() => {
+    setMenuOpenState(false);
+  }, [pathName]);
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <a className={styles.header_a} href="/about/link">
+        <Link className={styles.header_a} to="/">
           <img
             className={styles.header_logo}
             src="https://s3-ap-northeast-1.amazonaws.com/team-link-lp-picture/IMG/logoMain.png"
             alt="logo"
           />
-        </a>
+        </Link>
         <MediaQuery minWidth={886}>
           <ul className={styles.header_ul}>
             <li className={styles.header_li}>
-              <a className={styles.tag} href="/about/features">
+              <Link className={styles.tag} to="/about">
                 機能
-              </a>
+              </Link>
             </li>
             <li className={styles.header_li}>
-              <a href="/document" target="_blank" className={styles.tag}>
+              <Link to="/document" target="_blank" className={styles.tag}>
                 お役立ち資料
-              </a>
+              </Link>
             </li>
           </ul>
         </MediaQuery>
@@ -87,19 +93,19 @@ const Header = () => {
             >
               <ul className={styles.header_ul}>
                 <li className={styles.header_li}>
-                  <Link className={styles.tag} to="/about/link">
+                  <Link className={styles.tag} to="/">
                     Team Linkとは
                   </Link>
                 </li>
                 <li className={styles.header_li}>
-                  <a className={styles.tag} href="/about/features">
+                  <Link className={styles.tag} to="/about">
                     機能
-                  </a>
+                  </Link>
                 </li>
                 <li className={styles.header_li}>
-                  <a href="/document" target="_blank" className={styles.tag}>
+                  <Link to="/document" target="_blank" className={styles.tag}>
                     お役立ち資料
-                  </a>
+                  </Link>
                 </li>
                 <li className={styles.header_li}>
                   <a href="" className={styles.tag}>
@@ -117,13 +123,13 @@ const Header = () => {
                   </a>
                 </li>
               </ul>
-              <a className={styles.burger_a} href="/about/link">
+              <Link className={styles.burger_a} to="/">
                 <img
                   className={styles.header_logo}
                   src="https://s3-ap-northeast-1.amazonaws.com/team-link-lp-picture/IMG/logoMain.png"
                   alt="logo"
                 />
-              </a>
+              </Link>
             </Menu>
           </StyledMenu>
         </MediaQuery>

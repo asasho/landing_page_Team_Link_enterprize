@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./QandA.module.css";
+import styles from "./Faq.module.css";
+import styled from "styled-components";
 import {
   Accordion,
   AccordionItem,
@@ -7,53 +8,103 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import "react-accessible-accordion/dist/fancy-example.css";
 
-const QandA: React.FC = () => {
+import { Link, Element } from "react-scroll";
+
+const Faq: React.FC = () => {
   return (
-    <div className={styles.q_and_a}>
+    <div className={styles.faq}>
       <div className={styles.category}>
         <h1>よくあるお問い合わせ</h1>
         <div className={styles.table}>
-          <Link to="category_1" smooth={true} offset={-100}>
-            <h3>1. Team Linkについて</h3>
-          </Link>
-          <Link to="category_2" smooth={true} offset={-100}>
-            <h3>2. Team Linkの登録について</h3>
-          </Link>
-          <Link to="category_3" smooth={true} offset={-100}>
-            <h3>3. Team Linkの使い方について</h3>
-          </Link>
-          <Link to="category_4" smooth={true} offset={-100}>
-            <h3>4. サービスページ作成について</h3>
-          </Link>
-          <Link to="category_5" smooth={true} offset={-100}>
-            <h3>5. 検索機能について</h3>
-          </Link>
-          <Link to="category_6" smooth={true} offset={-100}>
-            <h3>6. メッセージ機能について</h3>
-          </Link>
-          <Link to="category_7" smooth={true} offset={-100}>
-            <h3>7. 法人アカウント管理について</h3>
-          </Link>
-          <Link to="category_8" smooth={true} offset={-100}>
-            <h3>8. 有料プランについて</h3>
-          </Link>
+          <div className={styles.table_item}>
+            <Link
+              to="category_1"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              1. Team Linkについて
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_2"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              2. Team Linkの登録について
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_3"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              3. Team Linkの使い方について
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_4"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              4. サービスページ作成について
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_5"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              5. 検索機能について
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_6"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              6. メッセージ機能について
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_7"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              7. 法人アカウント管理について
+            </Link>
+          </div>
+          <div className={styles.table_item}>
+            <Link
+              to="category_8"
+              smooth={true}
+              offset={-100}
+              className={styles.link_btn}
+            >
+              8. 有料プランについて
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className={styles.qa_container}>
         <Element name="category_1" className={styles.qa_wrap}>
           <h1>1. Team Linkについて</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items1.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -74,12 +125,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_2" className={styles.qa_wrap}>
           <h1>2. Team Linkの登録について</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items2.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -100,12 +151,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_3" className={styles.qa_wrap}>
           <h1>3. Team Linkの使い方について</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items3.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -126,12 +177,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_4" className={styles.qa_wrap}>
           <h1>4. サービスページ作成について</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items4.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -152,12 +203,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_5" className={styles.qa_wrap}>
           <h1>5. 検索機能について</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items5.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -178,12 +229,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_6" className={styles.qa_wrap}>
           <h1>6. メッセージ機能について</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items6.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -204,12 +255,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_7" className={styles.qa_wrap}>
           <h1>7. 法人アカウントについて</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items7.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -230,12 +281,12 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
 
         <Element name="category_8" className={styles.qa_wrap}>
           <h1>8. 有料プランについて</h1>
-          <Accordion allowZeroExpanded>
+          <StyledAccordion allowZeroExpanded>
             {items8.map((i) => (
               <div className={styles.QAset}>
                 <AccordionItem key={i.uuid}>
@@ -256,14 +307,14 @@ const QandA: React.FC = () => {
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </StyledAccordion>
         </Element>
       </div>
     </div>
   );
 };
 
-export default QandA;
+export default Faq;
 
 const items1 = [
   {
@@ -358,7 +409,7 @@ const items6 = [
     uuid: 4,
     heading: "メッセージの返信が来ません",
     content:
-      "メッセージの返信率はメッセージ内容によって30%〜70%と大きく変わります。共創のイメージがわきやすいメッセージを送りましょう。",
+      "メッセージの返信率はメッセージ内容によって大きく変わります。共創のイメージがわきやすいメッセージを送りましょう。",
   },
 ];
 
@@ -375,3 +426,38 @@ const items7 = [
 const items8 = [
   { uuid: 1, heading: "有料プランの内容を教えてください", content: "" },
 ];
+
+const StyledAccordion = styled(Accordion)`
+  .accordion__button {
+    background-color: white !important;
+    width: auto !important;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 0;
+    :before {
+      margin: 15px 18px 0 12px;
+      height: 12px;
+      width: 12px;
+      transform: rotate(45deg);
+      @media (max-width: 768px) {
+        height: 10px;
+        width: 10px;
+      }
+    }
+  }
+  .accordion__button[aria-expanded="true"]::before,
+  .accordion__button[aria-selected="true"]::before {
+    transform: rotate(225deg);
+    margin: 20px 18px 0 12px;
+  }
+  .accordion__item {
+    border: none;
+  }
+  .accordion__button {
+    border-radius: 5px;
+  }
+  .accordion__panel {
+    padding: 0;
+  }
+`;
