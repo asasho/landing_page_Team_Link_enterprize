@@ -16,15 +16,17 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Faq from "./pages/Faq";
+import Contact from "./pages/Contact";
 
 function App() {
-  // const { hash, pathname } = useLocation();
+  // const Hash = useLocation().hash;
+  // const pathName = useLocation().pathname;
 
   // useEffect(() => {
-  //   if (!hash) {
+  //   if (!Hash) {
   //     window.scrollTo(0, 0);
   //   }
-  // }, [hash, pathname]);
+  // }, [Hash, pathName]);
 
   return (
     <BrowserRouter>
@@ -35,6 +37,7 @@ function App() {
         <Route exact path="/privacy" component={PrivacyPolicy} />
         <Route exact path="/terms_of_service" component={TermsOfService} />
         <Route exact path="/faq" component={Faq} />
+        <Route exact path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
       <Cta />
