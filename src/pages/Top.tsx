@@ -296,10 +296,10 @@ const Top = () => {
           >
             <div className={styles.point_content}>
               <h3 className={styles.point_heading}>
-                ニーズにあわせ掲載し放題のサービス概要
+                自社認知につながる質問回答機能
               </h3>
               <div className={styles.point_description}>
-                サービスを担当するのがどのようなチームなのか、どんな課題が解決できるのかなどを顧客の多彩なニーズに合わせ発信することができます。
+                社長からの疑問に答えることで自社サービスの認知につなげることができます。
               </div>
               <div className={styles.point_button}>
                 <button className={styles.point_button_button}>

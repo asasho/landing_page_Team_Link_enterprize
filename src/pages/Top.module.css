@@ -357,15 +357,13 @@
   width: 128px;
 }
 
-.publish_service {
-  float: left;
-}
-
 .point_service {
   display: flex;
   justify-content: space-between;
   width: 1424px;
-  margin: 0 40px 100px 40px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .point_heading {

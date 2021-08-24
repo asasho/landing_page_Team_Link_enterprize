@@ -22,11 +22,13 @@ function App() {
   // const Hash = useLocation().hash;
   // const pathName = useLocation().pathname;
 
+  
   // useEffect(() => {
   //   if (!Hash) {
   //     window.scrollTo(0, 0);
   //   }
   // }, [Hash, pathName]);
+
 
   return (
     <BrowserRouter>
