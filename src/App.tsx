@@ -18,18 +18,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 
-function App() {
-  // const Hash = useLocation().hash;
-  // const pathName = useLocation().pathname;
-
-  
-  // useEffect(() => {
-  //   if (!Hash) {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, [Hash, pathName]);
-
-
+const App: React.VFC = () => {
   return (
     <BrowserRouter>
       <Header />
@@ -46,6 +35,6 @@ function App() {
       <Footer />
     </BrowserRouter>
   );
-}
+};
 
 export default App;

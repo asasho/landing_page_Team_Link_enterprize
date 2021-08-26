@@ -17,7 +17,7 @@ const NotFound = () => {
       <p className={styles.text}>
         入力したアドレスが間違っているか、ページが移動した可能性があります。
       </p>
-      <a className={styles.top} href="/about/link">
+      <a className={styles.top} href="/">
         <span>トップに戻る</span>
       </a>
     </div>
